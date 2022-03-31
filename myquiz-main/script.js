@@ -17,16 +17,16 @@ const exit = document.querySelector(".result-footer .exit");
 
 const mark_wrong = '<i class="fa fa-times"></i>';
 const mark_check = '<i class="fa fa-check"></i>';
-
-
-
+let counter = 0;
+let shuffled = shuffle(questions);
+var answerShuffle;
 start_btn.onclick =()=>{
     quiz_box.classList.remove("inactive");
     start_btn.classList.add("inactive");
 }
 
-total_q.innerText = questions.length;
-total_que_r.innerText = questions.length;
+total_q.innerText = shuffled.length;
+total_que_r.innerText = shuffled.length;
 
 var que_index = 0;
 var right_answers = 0;
@@ -35,11 +35,15 @@ count_que.innerText = que_index+1;
 ShowQuestion(que_index);
 
 function ShowQuestion(q_index){
-    que_text.innerText = questions[q_index].num+". "+ questions[q_index].question;
-var option_statement = "";
-for(var i=0; i<questions[q_index].options.length; i++){
-    option_statement += `<div class="option">${questions[q_index].options[i]}</div>`;
-}
+    var number = q_index + 1;
+    que_text.innerText = number+". "+ shuffled[q_index].question;
+    var option_statement = "";
+    answerShuffle = shuffle(shuffled[q_index].options)
+
+    for(var i=0; i<answerShuffle.length; i++){
+        option_statement += `<div class="option">${shuffled[q_index].options[i]}</div>`;
+    }
+    
 
 options_box.innerHTML = option_statement;
 
@@ -51,11 +55,10 @@ var AllOptions = options_box.querySelectorAll(".option");
     next_btn.classList.add("inactive");
 }
 
-
 next_btn.onclick=()=>{
     que_index++;
     
-    if(questions.length>que_index){
+    if(shuffled.length>que_index){
         count_que.innerText = que_index+1;
         ShowQuestion(que_index);
     }else{
@@ -64,19 +67,20 @@ next_btn.onclick=()=>{
         result_box.classList.remove("inactive");
         right_ans_r.innerText = right_answers;
         wrong_ans_r.innerText = wrong_answers;
-        percentage.innerText = ((right_answers*100)/questions.length).toFixed(2)+"%";
+        percentage.innerText = ((right_answers*100)/shuffled.length).toFixed(2)+"%";
 
         
     }
 
-    if(questions.length-1==que_index){
+    if(shuffled.length-1==que_index){
         next_btn.innerText = "Finish";
     }
 }
 
+
 function UserAnswer(answer){
     let userAns = answer.innerText;
-    let correctAns = questions[que_index].answer;
+    let correctAns = shuffled[que_index].answer;
     var AllOptions2 = options_box.querySelectorAll(".option");
 
     next_btn.classList.remove("inactive");
@@ -107,6 +111,7 @@ function UserAnswer(answer){
 
 }
 
+
 again_quiz.onclick=()=>{
     quiz_box.classList.remove("inactive");
     result_box.classList.add("inactive");
@@ -129,4 +134,22 @@ function reset(){
     next_btn.innerText = "Next Question";
    count_que.innerText = que_index+1;
    ShowQuestion(que_index);
+   shuffled = shuffle(questions);
 }
+
+function shuffle(array) {
+    let curId = array.length;
+    // There remain elements to shuffle
+    while (0 !== curId) {
+      counter++;
+      // Pick a remaining element
+      let randId = Math.floor(Math.random() * curId);
+      curId -= 1;
+      // Swap it with the current elementarray.
+      let tmp = array[curId];
+      array[curId] = array[randId];
+      array[randId] = tmp;
+      
+    }
+    return array;
+  }

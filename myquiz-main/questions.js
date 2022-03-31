@@ -1,6 +1,5 @@
 var questions =[
     {
-num : 1,
 question : "Which HTML element defines the title of a document?",
 answer : "meta",
 options : [
@@ -11,7 +10,6 @@ options : [
         ]
     },
     {
-num: 2,
 question: "The <h1> element in the HTML defines",
 answer: "Headings",
 options: [
@@ -22,7 +20,6 @@ options: [
 ]
 },
 {
-num: 3,
 question: "A HTML element known to be <ins>, defines",
 answer: "Insertion",
 options: [
@@ -34,7 +31,6 @@ options: [
 },
 
 {
-num: 4,
 question: "The <mark> element in HTML displays content as",
 answer: "Highlighted",
 options: [
@@ -45,7 +41,6 @@ options: [
 ]
 },
 {
-num: 5,
 question: "The HTML element known to be <del>, defines",
 answer: "Removed data",
 options: [
