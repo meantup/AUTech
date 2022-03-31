@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Website</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#">AUTech</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#">Home</a></li>
+        <li class="take"><a href="\myquiz-main\index.html">Take Quiz</a>
+          <ul class="quiz">
+              <li><a href="html">HTML</a></li>
+              <li><a href="javascript">Javascript</a></li>
+              <li><a href="css">CSS</a></li>
+          </ul>
+        </li>
+        <li class="lessonplan"><a href="lesson" >Lesson</a>
+            <ul class="submenu">
+                <li><a href="html">HTML</a></li>
+                <li><a href="javascript">Javascript</a></li>
+                <li><a href="css">CSS</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"></div>
+  <div class="about">
+    <div class="content">
+      <div class="title">HTML</div>
+      <p>HTML (Hypertext Markup Language) is the only markup language for creating web pages. It provides some titles, headings, paragraphs, lists, tables, embedded images, etc., to describe the structure of text-based and multimedia information in HTML documents.</p>
+      <p>HTML, in full hypertext markup language, a formatting system for displaying material retrieved over the Internet. Each retrieval unit is known as a Web page (from World Wide Web), and such pages frequently contain hypertext links that allow related pages to be retrieved.</p>
+      <p>The < meta> HTML element represents Metadata that cannot be represented by other HTML meta-related elements, like base, link, script, style or title.</p>
+      <br></br>
+
+      <div class="title2"> HTML Headings</div>
+      <p>What are HTML headings?
+        HTML defines six levels of headings. A heading element implies all the font changes, paragraph breaks before and after, and any white space necessary to render the heading. The heading elements are H1, H2, H3, H4, H5, and H6 with H1 being the highest (or most important) level and H6 the least.</p>
+      <p> < h1> headings should be used for main headings, followed by < h2> headings, then the less important < h3> , and so on. Note: Use HTML headings for headings only. Don't use headings to make text BIG or bold.</p>
+      <br></br>
+
+      <div class="title3">HTML Element</div>
+      <p>The < ins> HTML element represents a range of text that has been added to a document. You can use the < del> element to similarly represent a range of text that has been deleted from the document.</p>
+      <p>This attribute indicates the time and date of the change and must be a valid date with an optional time string. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp. For the format of the string without a time, see Format of a valid date string. The format of the string if it includes both date and time is covered in Format of a valid local date and time string.</p>
+      <br></br>
+
+      <div class="title3">HTML Elements Reference</div>
+      <p>The < mark> HTML element represents text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context. The < q> HTML element indicates that the enclosed text is a short inline quotation.</p>
+      <p>The < mark> tag in HTML is used to define the marked text. It is used to highlight the part of the text in a paragraph.</p>
+      <p>Otherwise, < mark> indicates a portion of the document's content which is likely to be relevant to the user's current activity. This might be used, for example, to indicate the words that matched a search operation.
+        Don't use < mark> for syntax highlighting purposes; instead, use the < span> element with appropriate CSS applied to it.</p>
+      <br></br>
+
+      <div class="title4">HTML < del> Tag</div>
+      <p>The < del> tag in HTML stands for delete and is used to mark a portion of text which has been deleted from the document. The deleted text is rendered as strike-through text by the web browsers although this property can be changed using CSS text-decoration property. The < del> tag requires a starting and ending tag.</p>
+      <p>The < del> tag defines text that has been deleted from a document. Browsers will usually strike a line through deleted text.</p>
+    </div>
+  </div>
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const submenu = document.querySelector(".submenu");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+      // this.scrollY > 20 ? submenu.classList.add("sticky") : submenu.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>
