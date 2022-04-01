@@ -25,14 +25,24 @@
 .navbar {
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
   z-index: 2;
   padding: 25px 0;
   transition: all 0.3s ease;
 }
 .navbar.sticky {
+  /* background: #1b1b1b; */
   background: #1b1b1b;
   padding: 10px 0;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.bg{
+  background: #1b1b1b;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 0;
 }
 .navbar .content {
   display: flex;
@@ -47,9 +57,11 @@
 }
 .navbar .menu-list {
   display: inline-flex;
+
 }
 .menu-list li {
   list-style: none;
+  position: relative;
 }
 .menu-list li a {
   color: #fff;
@@ -195,7 +207,7 @@ li.lessonplan:hover > .submenu {
     margin: 0;
     padding: 0;
     display: none;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color:  #1b1b1b;
     box-sizing: border-box;
   }
   .quiz {
@@ -204,7 +216,7 @@ li.lessonplan:hover > .submenu {
     margin: 0;
     padding: 0;
     display: none;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #1b1b1b;
     box-sizing: border-box;
   }
 }

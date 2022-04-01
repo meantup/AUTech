@@ -17,7 +17,6 @@ const exit = document.querySelector(".result-footer .exit");
 
 const mark_wrong = '<i class="fa fa-times"></i>';
 const mark_check = '<i class="fa fa-check"></i>';
-let counter = 0;
 let shuffled = shuffle(questions);
 var answerShuffle;
 start_btn.onclick =()=>{
@@ -77,7 +76,6 @@ next_btn.onclick=()=>{
     }
 }
 
-
 function UserAnswer(answer){
     let userAns = answer.innerText;
     let correctAns = shuffled[que_index].answer;
@@ -88,6 +86,7 @@ function UserAnswer(answer){
         console.log("%c Right Answer","color:green");
         answer.classList.add("correct");
         answer.insertAdjacentHTML("beforeend",mark_check);
+     
         right_answers++;
     }else{
 
@@ -141,9 +140,9 @@ function shuffle(array) {
     let curId = array.length;
     // There remain elements to shuffle
     while (0 !== curId) {
-      counter++;
       // Pick a remaining element
       let randId = Math.floor(Math.random() * curId);
+      console.log(randId);
       curId -= 1;
       // Swap it with the current elementarray.
       let tmp = array[curId];
