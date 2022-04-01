@@ -15,23 +15,23 @@
         <a href="#">AUTech</a>
       </div>
       <ul class="menu-list">
-        <div class="icon cancel-btn">
+        <div class="icon cancel-btn" >
           <i class="fas fa-times"></i>
         </div>
         <li><a href="#">Home</a></li>
-        <li class="take"><a href="\myquiz-main\index.html">Take Quiz</a>
-          <ul class="quiz">
-              <li><a href="html">HTML</a></li>
-              <li><a href="javascript">JS</a></li>
-              <li><a href="css">CSS</a></li>
-          </ul>
-        </li>
         <li class="lessonplan"><a href="lesson" >Lesson</a>
             <ul class="submenu">
                 <li><a href="html">HTML</a></li>
                 <li><a href="javascript">JS</a></li>
                 <li><a href="css">CSS</a></li>
             </ul>
+        </li>
+        <li class="take"><a href="index.html">Take Quiz</a>
+          <ul class="quiz">
+              <li><a href="\myquiz-main\quizzes\index.html">HTML</a></li>
+              <li><a href="\myquiz-main\quizzes\javascript.html">JS</a></li>
+              <li><a href="\myquiz-main\quizzes\css.html">CSS</a></li>
+          </ul>
         </li>
         <li><a href="#">About Us</a></li>
       </ul>
@@ -81,6 +81,7 @@
     const subquiz = document.querySelector(".quiz");
     const menuBtn = document.querySelector(".menu-btn");
     const cancelBtn = document.querySelector(".cancel-btn");
+    
     menuBtn.onclick = ()=>{
       navbar.classList.add("show");
       menuBtn.classList.add("hide");

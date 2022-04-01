@@ -28,21 +28,20 @@
   top: 0;
   left: 0;
   z-index: 2;
-  padding: 25px 0;
   transition: all 0.3s ease;
 }
 .navbar.sticky {
-  /* background: #1b1b1b; */
   background: #1b1b1b;
   padding: 10px 0;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .bg{
   background: #1b1b1b;
+  padding-top: 1.2em;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding: 10px 0;
+  padding: 10em 0;
 }
 .navbar .content {
   display: flex;
@@ -57,22 +56,22 @@
 }
 .navbar .menu-list {
   display: inline-flex;
-
+  position: relative;
 }
 .menu-list li {
   list-style: none;
-  position: relative;
+
 }
 .menu-list li a {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
-  margin-left: 25px;
+  padding: 0px 20px;
   text-decoration: none;
 }
 .menu-list li a:hover {
   color: #007bff;
-  border-bottom: 2px dotted #ffffff;
+  border-bottom: 3px dashed #e2e2e2;
 }
 .banner {
   background: url("bg2.jpg") no-repeat;
@@ -102,6 +101,7 @@
   position: absolute;
   right: 30px;
   top: 20px;
+  height: 10px;
 }
 @media (max-width: 1230px) {
   .content {
@@ -151,7 +151,7 @@
   .navbar .menu-list li a {
     font-size: 23px;
     margin-left: -100%;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
   }
   .navbar.show .menu-list li a {
     margin-left: 0px;
@@ -176,27 +176,33 @@
 }
 li.take:hover > .quiz {
   display: block;
+  align-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
 .quiz {
   display: none;
   position: absolute;
 }
 .quiz li {
-  margin-top: 5px;
-  padding-top: 5px;
+  padding-top: 0.8em;
   align-content: space-between;
+  
 }
 
 li.lessonplan:hover > .submenu {
   display: block;
+  align-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
+
 .submenu {
   display: none;
   position: absolute;
 }
 .submenu li {
-  margin-top: 5px;
-  padding-top: 5px;
+  padding-top: 0.8em;
   align-content: space-between;
 }
 
@@ -209,6 +215,7 @@ li.lessonplan:hover > .submenu {
     display: none;
     background-color:  #1b1b1b;
     box-sizing: border-box;
+
   }
   .quiz {
     position: relative;
@@ -218,5 +225,6 @@ li.lessonplan:hover > .submenu {
     display: none;
     background-color: #1b1b1b;
     box-sizing: border-box;
+ 
   }
 }

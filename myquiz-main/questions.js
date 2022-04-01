@@ -50,8 +50,4 @@ options: [
 "Overwritten data"
 ]
 },
-
-
-
-
 ];

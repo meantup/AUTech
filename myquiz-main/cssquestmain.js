@@ -17,15 +17,15 @@ const exit = document.querySelector(".result-footer .exit");
 
 const mark_wrong = '<i class="fa fa-times"></i>';
 const mark_check = '<i class="fa fa-check"></i>';
-let shuffled = shuffle(questions);
+let shuffled3 = shuffle(cssquestions);
 var answerShuffle;
 start_btn.onclick =()=>{
     quiz_box.classList.remove("inactive");
     start_btn.classList.add("inactive");
 }
 
-total_q.innerText = shuffled.length;
-total_que_r.innerText = shuffled.length;
+total_q.innerText = shuffled3.length;
+total_que_r.innerText = shuffled3.length;
 
 var que_index = 0;
 var right_answers = 0;
@@ -35,12 +35,11 @@ ShowQuestion(que_index);
 
 function ShowQuestion(q_index){
     var number = q_index + 1;
-    que_text.innerText = number+". "+ shuffled[q_index].question;
+    que_text.innerText = number+". "+ shuffled3[q_index].question;
     var option_statement = "";
-    answerShuffle = shuffle(shuffled[q_index].options)
-
+    answerShuffle = shuffle(shuffled3[q_index].options)
     for(var i=0; i<answerShuffle.length; i++){
-        option_statement += `<div class="option">${shuffled[q_index].options[i]}</div>`;
+        option_statement += `<div class="option">${shuffled3[q_index].options[i]}</div>`;
     }
     
 
@@ -49,7 +48,7 @@ options_box.innerHTML = option_statement;
 var AllOptions = options_box.querySelectorAll(".option");
 
     for(var j=0; j<AllOptions.length; j++){
-        AllOptions[j].setAttribute("onclick","UserAnswer(this)");
+        AllOptions[j].setAttribute("onclick","UserAnswered(this)");
     }
     next_btn.classList.add("inactive");
 }
@@ -57,7 +56,7 @@ var AllOptions = options_box.querySelectorAll(".option");
 next_btn.onclick=()=>{
     que_index++;
     
-    if(shuffled.length>que_index){
+    if(shuffled3.length>que_index){
         count_que.innerText = que_index+1;
         ShowQuestion(que_index);
     }else{
@@ -66,19 +65,19 @@ next_btn.onclick=()=>{
         result_box.classList.remove("inactive");
         right_ans_r.innerText = right_answers;
         wrong_ans_r.innerText = wrong_answers;
-        percentage.innerText = ((right_answers*100)/shuffled.length).toFixed(2)+"%";
+        percentage.innerText = ((right_answers*100)/shuffled3.length).toFixed(2)+"%";
 
         
     }
 
-    if(shuffled.length-1==que_index){
+    if(shuffled3.length-1==que_index){
         next_btn.innerText = "Finish";
     }
 }
 
-function UserAnswer(answer){
+function UserAnswered(answer){
     let userAns = answer.innerText;
-    let correctAns = shuffled[que_index].answer;
+    let correctAns = shuffled3[que_index].answer;
     var AllOptions2 = options_box.querySelectorAll(".option");
 
     next_btn.classList.remove("inactive");
@@ -132,7 +131,7 @@ function reset(){
     wrong_answers = 0;
     next_btn.innerText = "Next Question";
    count_que.innerText = que_index+1;
-   shuffled = shuffle(questions);
+   shuffled3 = shuffle(cssquestions);
    ShowQuestion(que_index);
 }
 
