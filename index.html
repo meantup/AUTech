@@ -19,14 +19,14 @@
           <i class="fas fa-times"></i>
         </div>
         <li><a href="#">Home</a></li>
-        <li class="lessonplan"><a href="lesson" >Lesson</a>
+        <li class="lessonplan"><a href="lesson" >Lesson</a><i class="fas fa-angle-down"></i>
             <ul class="submenu">
                 <li><a href="html">HTML</a></li>
                 <li><a href="javascript">JS</a></li>
                 <li><a href="css">CSS</a></li>
             </ul>
         </li>
-        <li class="take"><a href="index.html">Take Quiz</a>
+        <li class="take"><a href="index.html">Take Quiz</a><i class="fas fa-angle-down"></i>
           <ul class="quiz">
               <li><a href="\myquiz-main\quizzes\index.html">HTML</a></li>
               <li><a href="\myquiz-main\quizzes\javascript.html">JS</a></li>
@@ -81,7 +81,9 @@
     const subquiz = document.querySelector(".quiz");
     const menuBtn = document.querySelector(".menu-btn");
     const cancelBtn = document.querySelector(".cancel-btn");
-    
+    const lessonplan = document.querySelector(".lessonplan");
+    const take = document.querySelector(".take");
+   
     menuBtn.onclick = ()=>{
       navbar.classList.add("show");
       menuBtn.classList.add("hide");
@@ -92,6 +94,7 @@
       navbar.classList.remove("show");
       menuBtn.classList.remove("hide");
     }
+
     window.onscroll = ()=>{
       this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
       this.scrollY > 20 ? submenu.classList.add("bg") : submenu.classList.remove("bg");

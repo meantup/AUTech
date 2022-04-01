@@ -187,7 +187,6 @@ li.take:hover > .quiz {
 .quiz li {
   padding-top: 0.8em;
   align-content: space-between;
-  
 }
 
 li.lessonplan:hover > .submenu {
@@ -195,6 +194,7 @@ li.lessonplan:hover > .submenu {
   align-content: space-between;
   align-items: center;
   padding: 0 10px;
+
 }
 
 .submenu {
@@ -215,7 +215,7 @@ li.lessonplan:hover > .submenu {
     display: none;
     background-color:  #1b1b1b;
     box-sizing: border-box;
-
+    
   }
   .quiz {
     position: relative;
