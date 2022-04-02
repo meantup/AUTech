@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
+
   <nav class="navbar">
     <div class="content">
       <div class="logo">
@@ -21,9 +22,10 @@
         <li><a href="#">Home</a></li>
         <li class="lessonplan"><a href="lesson" >Lesson</a><i class="fas fa-angle-down"></i>
             <ul class="submenu">
-                <li><a href="html">HTML</a></li>
-                <li><a href="javascript">JS</a></li>
-                <li><a href="css">CSS</a></li>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#js">JS</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#php">PHP</a></li>
             </ul>
         </li>
         <li class="take"><a href="index.html">Take Quiz</a><i class="fas fa-angle-down"></i>
@@ -31,21 +33,22 @@
               <li><a href="\myquiz-main\quizzes\index.html">HTML</a></li>
               <li><a href="\myquiz-main\quizzes\javascript.html">JS</a></li>
               <li><a href="\myquiz-main\quizzes\css.html">CSS</a></li>
+              <li><a href="\myquiz-main\quizzes\php.html">PHP</a></li>
           </ul>
         </li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="#abot">About Us</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
       </div>
     </div>
   </nav>
+
   <div class="banner"></div>
-  <div class="about">
+  <div class="about" id="html">
     <div class="content">
       <div class="title">HTML</div>
-      <p>&lt;h1&gt;This is Header 1 tags&lt;/h1&gt;</p>
-
+      
       <p>HTML (Hypertext Markup Language) is the only markup language for creating web pages. It provides some titles, headings, paragraphs, lists, tables, embedded images, etc., to describe the structure of text-based and multimedia information in HTML documents.</p>
       <p>HTML, in full hypertext markup language, a formatting system for displaying material retrieved over the Internet. Each retrieval unit is known as a Web page (from World Wide Web), and such pages frequently contain hypertext links that allow related pages to be retrieved.</p>
       <p>The &lt;meta&gt; HTML element represents Metadata that cannot be represented by other HTML meta-related elements, like base, link, script, style or title.</p>
@@ -74,6 +77,333 @@
       <p>The &lt;del&gt; tag defines text that has been deleted from a document. Browsers will usually strike a line through deleted text.</p>
     </div>
   </div>
+  <div class="content" id="js"><hr style="height: 0.3em; background-color:black;"> </div><br><br>
+  <div class="js">
+    <div class="content">
+      <div class="title2"> JavaScript </div>
+      <p> CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.This tutorial will teach you CSS from basic to advanced</p>
+      <br><br>
+
+      <div class="title2"> What is JavaScript?</div>
+      <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS file.</p>
+      <br><br>
+
+      <div class="title3"> Why Use JavaScript? </div>
+      <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+      <br><br>
+
+      <div class="title4"> JavaScript Solved a Big Problem </div>
+          <p>HTML was NEVER intended to contain tags for formatting a web page! 
+            HTML was created to describe the content of a web page, like:</p>
+
+          <p>&lt;h1&gt;This is Header 1 tags&lt;/h1&gt;</p>
+          <p>&lt;p&gt;This is paragraph tags&lt;/p&gt;</p>
+          
+          <p>When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.</p>  
+          <p>To solve this problem, the World Wide Web Consortium (W3C) created CSS.</p>
+          <p>CSS removed the style formatting from the HTML page!</p>
+      <br><br>
+      <div class="title4"> JavaScript Saves a Lot of Work! </div>
+          <p>The style definitions are normally saved in external .css files with an external stylesheet file, you can change the look of an entire website by changing just one file!</p>
+     <br><br>
+      <div class="title4"> JavaScript Syntax </div>
+            
+            <p>A JavaScript rule consists of a selector and a declaration block.</p>
+            <p>The selector points to the HTML element you want to style.</p>
+            <p>The declaration block contains one or more declarations separated by semicolons.</p>
+            <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
+            <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.<p>
+      <br><br>
+      <div class="title4"> JavaScript Selectors </div>
+            <p><i>JavaScript selectors are used to "find" (or select) the HTML elements you want to style.</i><p><br>
+
+            <h3>We can divide JavaScript selectors into five categories:</h3>
+            <br>
+            <p>•Simple selectors (select elements based on name, id, class)                         </p>
+            <p>•Combinator selectors (select elements based on a specific relationship between them)</p>
+            <p>•Pseudo-class selectors (select elements based on a certain state)                   </p>
+            <p>•Pseudo-elements selectors (select and style a part of an element)                   </p>
+            <p>•Attribute selectors (select elements based on an attribute or attribute value)      </p>
+      <br><br>
+      <div class="title4"> The JavaScript id Selector </div>
+            <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+            <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+            <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+            <p>Note: An id name cannot start with a number!</p>
+      <br><br>
+      <div class="title4"> The JavaScript class Selector </div>
+              <p>The class selector selects HTML elements with a specific class attribute.</p>
+              <p>To select elements with a specific class, write a period (.) character, followed by the class name
+              <p>You can also specify that only specific HTML elements should be affected by a class.
+              <p>HTML elements can also refer to more than one class.
+            <p>Note: A class name cannot start with a number!</p>
+      <br><br>
+      <div class="title4"> The JavaScript Universal Selector</div>
+            <p>The universal selector (*) selects all HTML elements on the page.</p>
+      <br><br>
+      <div class="title4">The JavaScript Grouping Selector</div>
+            <p>The grouping selector selects all the HTML elements with the same style definitions.
+              Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+              It will be better to group the selectors, to minimize the code.
+              To group selectors, separate each selector with a comma.</p>
+      <br><br>
+      <div class="title4"> How To Add JavaScript </div>
+            <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.<p>
+      <br><br>
+      <div class="title4"> Three Ways to Insert JavaScript </div>   <br>
+        <h3>There are three ways of inserting a style sheet:</h3>
+            <p>• External</p>
+            <p>• Internal</p>
+            <p>• Inline</p>
+      <br><br>
+      <div class="title4"> External JavaScript </div>
+            <p>With an external style sheet, you can change the look of an entire website by changing just one file!<br>
+            Each HTML page must include a reference to the external style sheet file inside the &lt;style&gt; element, inside the head section.<br>
+            An external style sheet can be written in any text editor, and must be saved with a .css extension.<br>
+            The external .css file should not contain any HTML tags.</p>
+      <br><br>
+      <div class="title4"> Internal JavaScript </div>
+            <p>An internal style sheet may be used if one single HTML page has a unique style.
+            The internal style is defined inside the &lt;style&gt; element, inside the head section.</p>
+      <br><br>
+      <div class="title4"> Inline JavaScript</div>
+            <p>An inline style may be used to apply a unique style for a single element.To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+            <p>Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.</p>
+      <br><br>
+      <div class="title4"> Multiple Style Sheets </div>
+            <p>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. </p>
+      <br><br>
+      <div class="title4"> Cascading Order </div> <br>
+            <h3>What style will be used when there is more than one style specified for an HTML element?</h3>
+            <br>
+                <p>All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:</p>
+                <p>•Inline style (inside an HTML element)</p>
+                <p>•External and internal style sheets (in the head section)</p>
+                <p>•Browser default</p>
+                <p>So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+      <br><br>
+      <div class="title4"> JavaScript Comments </div>
+            <p>CSS comments are not displayed in the browser, but they can help document your source code.Comments are used to explain the code, and may help when you edit the source code at a later date.Comments are ignored by browsers.A CSS comment is placed inside the style element, and starts with /* and ends with */:</p>
+    </div>
+  </div>   <br><br>
+  <div class="content" id="css"><hr style="height: 0.3em; background-color:black;"> </div><br><br>
+  <div class="css">
+    <div class="content">
+      <div class="title2"> CSS </div>
+      <p> CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.This tutorial will teach you CSS from basic to advanced</p>
+      <br><br>
+
+      <div class="title2"> What is CSS?</div>
+      <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS file.</p>
+      <br><br>
+
+      <div class="title3"> Why Use CSS? </div>
+      <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+      <br><br>
+
+      <div class="title4"> CSS Solved a Big Problem </div>
+          <p>HTML was NEVER intended to contain tags for formatting a web page! 
+            HTML was created to describe the content of a web page, like:</p>
+
+          <p>&lt;h1&gt;This is Header 1 tags&lt;/h1&gt;</p>
+          <p>&lt;p&gt;This is paragraph tags&lt;/p&gt;</p>
+          
+          <p>When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.</p>  
+          <p>To solve this problem, the World Wide Web Consortium (W3C) created CSS.</p>
+          <p>CSS removed the style formatting from the HTML page!</p>
+      <br><br>
+      <div class="title4"> CSS Saves a Lot of Work! </div>
+          <p>The style definitions are normally saved in external .css files with an external stylesheet file, you can change the look of an entire website by changing just one file!</p>
+     <br><br>
+      <div class="title4"> CSS Syntax </div>
+            
+            <p>A CSS rule consists of a selector and a declaration block.</p>
+            <p>The selector points to the HTML element you want to style.</p>
+            <p>The declaration block contains one or more declarations separated by semicolons.</p>
+            <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
+            <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.<p>
+      <br><br>
+      <div class="title4"> CSS Selectors </div>
+            <p><i>CSS selectors are used to "find" (or select) the HTML elements you want to style.</i><p><br>
+
+            <h3>We can divide CSS selectors into five categories:</h3>
+            <br>
+            <p>•Simple selectors (select elements based on name, id, class)                         </p>
+            <p>•Combinator selectors (select elements based on a specific relationship between them)</p>
+            <p>•Pseudo-class selectors (select elements based on a certain state)                   </p>
+            <p>•Pseudo-elements selectors (select and style a part of an element)                   </p>
+            <p>•Attribute selectors (select elements based on an attribute or attribute value)      </p>
+      <br><br>
+      <div class="title4"> The CSS id Selector </div>
+            <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+            <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+            <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+            <p>Note: An id name cannot start with a number!</p>
+      <br><br>
+      <div class="title4"> The CSS class Selector </div>
+              <p>The class selector selects HTML elements with a specific class attribute.</p>
+              <p>To select elements with a specific class, write a period (.) character, followed by the class name
+              <p>You can also specify that only specific HTML elements should be affected by a class.
+              <p>HTML elements can also refer to more than one class.
+            <p>Note: A class name cannot start with a number!</p>
+      <br><br>
+      <div class="title4"> The CSS Universal Selector</div>
+            <p>The universal selector (*) selects all HTML elements on the page.</p>
+      <br><br>
+      <div class="title4">The CSS Grouping Selector</div>
+            <p>The grouping selector selects all the HTML elements with the same style definitions.
+              Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+              It will be better to group the selectors, to minimize the code.
+              To group selectors, separate each selector with a comma.</p>
+      <br><br>
+      <div class="title4"> How To Add CSS </div>
+            <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.<p>
+      <br><br>
+      <div class="title4"> Three Ways to Insert CSS </div>   <br>
+        <h3>There are three ways of inserting a style sheet:</h3>
+            <p>• External</p>
+            <p>• Internal</p>
+            <p>• Inline</p>
+      <br><br>
+      <div class="title4"> External CSS </div>
+            <p>With an external style sheet, you can change the look of an entire website by changing just one file!<br>
+            Each HTML page must include a reference to the external style sheet file inside the &lt;style&gt; element, inside the head section.<br>
+            An external style sheet can be written in any text editor, and must be saved with a .css extension.<br>
+            The external .css file should not contain any HTML tags.</p>
+      <br><br>
+      <div class="title4"> Internal CSS </div>
+            <p>An internal style sheet may be used if one single HTML page has a unique style.
+            The internal style is defined inside the &lt;style&gt; element, inside the head section.</p>
+      <br><br>
+      <div class="title4"> Inline CSS</div>
+            <p>An inline style may be used to apply a unique style for a single element.To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+            <p>Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.</p>
+      <br><br>
+      <div class="title4"> Multiple Style Sheets </div>
+            <p>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. </p>
+      <br><br>
+      <div class="title4"> Cascading Order </div> <br>
+            <h3>What style will be used when there is more than one style specified for an HTML element?</h3>
+            <br>
+                <p>All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:</p>
+                <p>•Inline style (inside an HTML element)</p>
+                <p>•External and internal style sheets (in the head section)</p>
+                <p>•Browser default</p>
+                <p>So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+      <br><br>
+      <div class="title4"> CSS Comments </div>
+            <p>CSS comments are not displayed in the browser, but they can help document your source code.Comments are used to explain the code, and may help when you edit the source code at a later date.Comments are ignored by browsers.A CSS comment is placed inside the style element, and starts with /* and ends with */:</p>
+    </div>
+  </div>   <br><br>
+  <div class="content" id="php"><hr style="height: 0.3em; background-color:black;"> </div><br><br>
+  <div class="php">
+    <div class="content">
+      <div class="title2"> PHP </div>
+      <p> PHP is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.This tutorial will teach you CSS from basic to advanced</p>
+      <br><br>
+
+      <div class="title2"> What is PHP?</div>
+      <p>PHP stands for Cascading Style Sheets. PHP describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS file.</p>
+      <br><br>
+
+      <div class="title3"> Why Use PHP? </div>
+      <p>PHP is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+      <br><br>
+
+      <div class="title4"> PHP Solved a Big Problem </div>
+          <p>HTML was NEVER intended to contain tags for formatting a web page! 
+            HTML was created to describe the content of a web page, like:</p>
+
+          <p>&lt;h1&gt;This is Header 1 tags&lt;/h1&gt;</p>
+          <p>&lt;p&gt;This is paragraph tags&lt;/p&gt;</p>
+          
+          <p>When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.</p>  
+          <p>To solve this problem, the World Wide Web Consortium (W3C) created CSS.</p>
+          <p>CSS removed the style formatting from the HTML page!</p>
+      <br><br>
+      <div class="title4"> PHP Saves a Lot of Work! </div>
+          <p>The style definitions are normally saved in external .css files with an external stylesheet file, you can change the look of an entire website by changing just one file!</p>
+     <br><br>
+      <div class="title4"> PHP Syntax </div>
+            
+            <p>A PHP rule consists of a selector and a declaration block.</p>
+            <p>The selector points to the HTML element you want to style.</p>
+            <p>The declaration block contains one or more declarations separated by semicolons.</p>
+            <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
+            <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.<p>
+      <br><br>
+      <div class="title4"> PHP Selectors </div>
+            <p><i>CSS selectors are used to "find" (or select) the HTML elements you want to style.</i><p><br>
+
+            <h3>We can divide PHP selectors into five categories:</h3>
+            <br>
+            <p>•Simple selectors (select elements based on name, id, class)                         </p>
+            <p>•Combinator selectors (select elements based on a specific relationship between them)</p>
+            <p>•Pseudo-class selectors (select elements based on a certain state)                   </p>
+            <p>•Pseudo-elements selectors (select and style a part of an element)                   </p>
+            <p>•Attribute selectors (select elements based on an attribute or attribute value)      </p>
+      <br><br>
+      <div class="title4"> The PHP id Selector </div>
+            <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+            <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+            <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+            <p>Note: An id name cannot start with a number!</p>
+      <br><br>
+      <div class="title4"> The PHP class Selector </div>
+              <p>The class selector selects HTML elements with a specific class attribute.</p>
+              <p>To select elements with a specific class, write a period (.) character, followed by the class name
+              <p>You can also specify that only specific HTML elements should be affected by a class.
+              <p>HTML elements can also refer to more than one class.
+            <p>Note: A class name cannot start with a number!</p>
+      <br><br>
+      <div class="title4"> The PHP Universal Selector</div>
+            <p>The universal selector (*) selects all HTML elements on the page.</p>
+      <br><br>
+      <div class="title4">The PHP Grouping Selector</div>
+            <p>The grouping selector selects all the HTML elements with the same style definitions.
+              Look at the following PHP code (the h1, h2, and p elements have the same style definitions):
+              It will be better to group the selectors, to minimize the code.
+              To group selectors, separate each selector with a comma.</p>
+      <br><br>
+      <div class="title4"> How To Add PHP </div>
+            <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.<p>
+      <br><br>
+      <div class="title4"> Three Ways to Insert PHP </div>   <br>
+        <h3>There are three ways of inserting a style sheet:</h3>
+            <p>• External</p>
+            <p>• Internal</p>
+            <p>• Inline</p>
+      <br><br>
+      <div class="title4"> External PHP </div>
+            <p>With an external style sheet, you can change the look of an entire website by changing just one file!<br>
+            Each HTML page must include a reference to the external style sheet file inside the &lt;style&gt; element, inside the head section.<br>
+            An external style sheet can be written in any text editor, and must be saved with a .css extension.<br>
+            The external .css file should not contain any HTML tags.</p>
+      <br><br>
+      <div class="title4"> Internal PHP </div>
+            <p>An internal style sheet may be used if one single HTML page has a unique style.
+            The internal style is defined inside the &lt;style&gt; element, inside the head section.</p>
+      <br><br>
+      <div class="title4"> Inline PHP</div>
+            <p>An inline style may be used to apply a unique style for a single element.To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+            <p>Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.</p>
+      <br><br>
+      <div class="title4"> Multiple Style Sheets </div>
+            <p>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. </p>
+      <br><br>
+      <div class="title4"> Cascading Order </div> <br>
+            <h3>What style will be used when there is more than one style specified for an HTML element?</h3>
+            <br>
+                <p>All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:</p>
+                <p>•Inline style (inside an HTML element)</p>
+                <p>•External and internal style sheets (in the head section)</p>
+                <p>•Browser default</p>
+                <p>So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+      <br><br>
+      <div class="title4"> PHP Comments </div>
+            <p>CSS comments are not displayed in the browser, but they can help document your source code.Comments are used to explain the code, and may help when you edit the source code at a later date.Comments are ignored by browsers.A CSS comment is placed inside the style element, and starts with /* and ends with */:</p>
+    </div>
+  </div>
   <script>
     const body = document.querySelector("body");
     const navbar = document.querySelector(".navbar");
@@ -81,9 +411,6 @@
     const subquiz = document.querySelector(".quiz");
     const menuBtn = document.querySelector(".menu-btn");
     const cancelBtn = document.querySelector(".cancel-btn");
-    const lessonplan = document.querySelector(".lessonplan");
-    const take = document.querySelector(".take");
-   
     menuBtn.onclick = ()=>{
       navbar.classList.add("show");
       menuBtn.classList.add("hide");

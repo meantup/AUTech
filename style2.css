@@ -207,7 +207,7 @@ li.lessonplan:hover > .submenu {
 }
 
 @media (max-width: 868px) {
-  .submenu {
+  .submenu, .quiz{
     position: relative;
     width: 100%;
     margin: 0;
@@ -216,15 +216,5 @@ li.lessonplan:hover > .submenu {
     background-color:  #1b1b1b;
     box-sizing: border-box;
     
-  }
-  .quiz {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: none;
-    background-color: #1b1b1b;
-    box-sizing: border-box;
- 
   }
 }

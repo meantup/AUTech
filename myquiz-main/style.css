@@ -47,6 +47,11 @@ body{
     max-width: 600px;
     background: rgba(0,0,0,0.5);
 }
+@media (max-width: 868px) {
+    .quiz-box{
+        margin-top: 2em;
+    }
+}
 .quiz-box h2{
     font-size: 30px;
 }
@@ -120,9 +125,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     color: #fff;
-  
     box-shadow: 0 0 10px #777;
-    
     width: 100%;
     max-width: 450px;
     background: rgba(0,0,0,0.5);
@@ -176,4 +179,7 @@ body{
     background: #911ae2;
     color: #fff;
     border-color: #911ae2;
+}
+div.exit > a{
+    text-decoration: none;
 }
